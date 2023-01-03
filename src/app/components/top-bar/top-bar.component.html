@@ -1,0 +1,22 @@
+<h1>
+    Emanuel Douglas Sosua Costa
+</h1>
+
+<ul class="desktop-menu">
+    <li *ngFor="let l of listLinks">
+        <a [routerLink]="[l.routerLink]">{{ l.label }}</a>
+    </li>
+</ul>
+
+<button class="toggle-button" (click)="displaysidebar = !displaysidebar">
+    <i class="pi pi-bars"></i>
+</button>
+
+
+<p-sidebar *ngIf="displaysidebar" [(visible)]="displaysidebar" [fullScreen]="true">
+    <ul class="mobile-menu">
+        <li *ngFor="let l of listLinks">
+            <a (click)="displaysidebar = false" [routerLink]="[l.routerLink]">{{ l.label }}</a>
+        </li>
+    </ul>
+</p-sidebar>

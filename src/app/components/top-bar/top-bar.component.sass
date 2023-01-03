@@ -1,0 +1,49 @@
+@use 'src/styles/_breaks.sass' as brk
+
+@mixin show-desktop($desktop-display)
+    display: none
+    @media screen and ( min-width: brk.$mobile )
+        display: $desktop-display
+
+:host
+    display: flex
+    justify-content: space-between
+    padding: 0 5rem
+    align-items: center
+
+    h1
+        @include show-desktop(initial)
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        font-size: 24px
+
+    ul
+        list-style: none
+        display: flex
+        gap: 16px
+        align-items: center
+        @include show-desktop(flex)
+        &.mobile-menu
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin: 0
+            padding: 0
+            gap: 2rem
+            height: 100%
+        a
+            text-decoration: none
+            color: black
+            font-size: 18px
+            font-weight: bold
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            &:hover
+                opacity: 50%
+
+    .toggle-button
+        background-color: transparent
+        border: none
+        margin: 24px 24px 16px auto
+        cursor: pointer
+        @media screen and ( min-width: brk.$mobile )
+            display: none
