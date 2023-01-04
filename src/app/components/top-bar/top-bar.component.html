@@ -16,7 +16,16 @@
 <p-sidebar *ngIf="displaysidebar" [(visible)]="displaysidebar" [fullScreen]="true">
     <ul class="mobile-menu">
         <li *ngFor="let l of listLinks">
+
             <a (click)="displaysidebar = false" [routerLink]="[l.routerLink]">{{ l.label }}</a>
+            <ng-template #button>
+                <button (click)="click(l.clickEvent)">
+                    {{ l.label }}
+                </button>
+            </ng-template>
         </li>
     </ul>
+
+
+
 </p-sidebar>

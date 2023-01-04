@@ -8,8 +8,10 @@
 :host
     display: flex
     justify-content: space-between
-    padding: 0 5rem
+    padding: 0
     align-items: center
+    @media screen and ( min-width:  brk.$mobile )
+        padding: 0 5rem
 
     h1
         @include show-desktop(initial)

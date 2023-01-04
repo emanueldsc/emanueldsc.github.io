@@ -4,20 +4,25 @@ import { RouterModule } from '@angular/router';
 import { PrimeModule } from '../lib/prime.module';
 import { ContactComponent } from './contact/contact.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { SocialMediasComponent } from './social-medias/social-medias.component';
+import { PipeModule } from '../pipes/pipe.module';
 
 @NgModule({
   declarations: [
     TopBarComponent,
-    ContactComponent
+    ContactComponent,
+    SocialMediasComponent
   ],
   imports: [
     CommonModule,
     PrimeModule,
-    RouterModule
+    RouterModule,
+    PipeModule
   ],
   exports: [
     TopBarComponent,
-    ContactComponent
+    ContactComponent,
+    SocialMediasComponent
   ]
 })
 export class ComponentsModule { }
