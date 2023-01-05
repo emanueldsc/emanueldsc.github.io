@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 
 export interface DialogShow {
   isShow: boolean,
-  template?: ElementRef<any>
+  template: TemplateRef<any> | null
 }
 
 @Injectable({
@@ -11,9 +11,8 @@ export interface DialogShow {
 })
 export class DialogService {
 
-  public dialogStatus: Subject<DialogShow> = new Subject()
-
-  public showDialog = (template: ElementRef<any>) => this.dialogStatus.next({ isShow: true, template })
+  public dialogStatus: Subject<Partial<DialogShow>> = new Subject()
+  public showDialog = (template: TemplateRef<any>) => this.dialogStatus.next({ isShow: true, template })
   public hideDialog = () => this.dialogStatus.next({ isShow: false })
 
 }

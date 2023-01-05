@@ -1,1 +1,39 @@
-<p>contact works!</p>
+<p-dialog [(visible)]="visible" (onHide)="onVisibleHide()" [draggable]="false" [resizable]="false" [modal]="true"
+    [breakpoints]="false" [breakpoints]="{'900px': '95vw'}" [style]="{width: '50vw'}">
+    <ng-template pTemplate="header">
+        <h1>Contact</h1>
+    </ng-template>
+
+    <section class="panels">
+        <ng-template [ngTemplateOutlet]="labelData"
+            [ngTemplateOutletContext]="{$implicit: label_location}"></ng-template>
+        <ng-template [ngTemplateOutlet]="labelData" [ngTemplateOutletContext]="{$implicit: label_phone}"></ng-template>
+        <ng-template [ngTemplateOutlet]="labelData" [ngTemplateOutletContext]="{$implicit: label_email}"></ng-template>
+        <ng-template [ngTemplateOutlet]="labelData"
+            [ngTemplateOutletContext]="{$implicit: label_whatsapp}"></ng-template>
+    </section>
+
+    <!-- <section class="formContainer">
+        <form #f="ngForm" (ngSubmit)="submit(f)">
+            <input tabindex="0" class="name" type="text" name="name" placeholder="Name" pInputText ngModel>
+            <input tabindex="1" class="email" type="text" name="email" placeholder="Email" pInputText ngModel>
+            <textarea tabindex="2" class="message" name="message" placeholder="Message" pInputTextarea
+                ngModel></textarea>
+        </form>
+    </section>
+
+    <ng-template pTemplate="footer">
+        <button tabindex="3" class="btnSubmit" (click)="submit(f)" type="submit">Enviar</button>
+    </ng-template> -->
+</p-dialog>
+
+<ng-template #labelData let-data>
+    <div>
+        <i [class]="data.icon"></i>
+        <label>{{data.label}}</label>
+        <p *ngIf="!data.link; else link">{{data.data}}</p>
+        <ng-template #link>
+            <a target="_blank" style="display: block;" [href]="'https://'+data.data+'?text=Olá Emanuel!%0aConsegui seu contato pelo site'">{{data.data}}</a>
+        </ng-template>
+    </div>
+</ng-template>

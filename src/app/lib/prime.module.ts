@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SidebarModule } from 'primeng/sidebar';
-import { ComponentsModule } from '../components/components.module';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext'
+import { InputTextareaModule } from 'primeng/inputtextarea'
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule
   ],
   exports: [
-    SidebarModule
+    SidebarModule,
+    DialogModule,
+    InputTextModule,
+    InputTextareaModule
   ]
 })
 export class PrimeModule { }

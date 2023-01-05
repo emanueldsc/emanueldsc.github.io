@@ -4,7 +4,12 @@
 
 <ul class="desktop-menu">
     <li *ngFor="let l of listLinks">
-        <a [routerLink]="[l.routerLink]">{{ l.label }}</a>
+        <ng-container *ngIf="l.type == 'LINK'">
+            <ng-container [ngTemplateOutlet]="linkTempalte" [ngTemplateOutletContext]="{ l }"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="l.type == 'BUTTON'">
+            <ng-container [ngTemplateOutlet]="buttonTemplate" [ngTemplateOutletContext]="{ l }"></ng-container>
+        </ng-container>
     </li>
 </ul>
 
@@ -16,16 +21,24 @@
 <p-sidebar *ngIf="displaysidebar" [(visible)]="displaysidebar" [fullScreen]="true">
     <ul class="mobile-menu">
         <li *ngFor="let l of listLinks">
-
-            <a (click)="displaysidebar = false" [routerLink]="[l.routerLink]">{{ l.label }}</a>
-            <ng-template #button>
-                <button (click)="click(l.clickEvent)">
-                    {{ l.label }}
-                </button>
-            </ng-template>
+            <ng-container *ngIf="l.type == 'LINK'">
+                <ng-container [ngTemplateOutlet]="linkTempalte" [ngTemplateOutletContext]="{ l }"></ng-container>
+            </ng-container>
+            <ng-container *ngIf="l.type == 'BUTTON'">
+                <ng-container [ngTemplateOutlet]="buttonTemplate" [ngTemplateOutletContext]="{ l }"></ng-container>
+            </ng-container>
         </li>
     </ul>
 
 
 
 </p-sidebar>
+
+
+<ng-template #linkTempalte let-l="l">
+    <a (click)="displaysidebar = false" [routerLink]="[l.routerLink]">{{ l.label }}</a>
+</ng-template>
+
+<ng-template #buttonTemplate let-l="l">
+    <button (click)="click(l.clickEvent)"> {{ l.label }} </button>
+</ng-template>

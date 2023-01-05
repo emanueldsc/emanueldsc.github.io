@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SocialMediasComponent } from './social-medias/social-medias.component';
 import { PipeModule } from '../pipes/pipe.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PipeModule } from '../pipes/pipe.module';
     CommonModule,
     PrimeModule,
     RouterModule,
-    PipeModule
+    PipeModule,
+    FormsModule
   ],
   exports: [
     TopBarComponent,

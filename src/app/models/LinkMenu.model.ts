@@ -1,5 +1,5 @@
 export enum LinkMenuType {
-    LINK, BUTTON
+    LINK = 'LINK', BUTTON = 'BUTTON'
 }
 
 export class LinkMenu {
