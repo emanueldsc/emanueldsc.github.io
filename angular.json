@@ -33,9 +33,22 @@
               "src/styles.sass",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/prismjs/themes/prism-okaidia.min.css",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.min.css",
+              "node_modules/katex/dist/katex.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/marked.min.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/components/prism-javascript.min.js",
+              "node_modules/prismjs/components/prism-css.min.js",
+              "node_modules/mermaid/dist/mermaid.min.js",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.min.js",
+              "node_modules/katex/dist/katex.min.js",
+              "node_modules/katex/dist/contrib/auto-render.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -96,9 +109,25 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/prismjs/themes/prism-okaidia.min.css",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.min.css",
+              "node_modules/katex/dist/katex.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/marked.min.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/components/prism-javascript.min.js",
+              "node_modules/prismjs/components/prism-css.min.js",
+              "node_modules/mermaid/dist/mermaid.min.js",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.min.js",
+              "node_modules/katex/dist/katex.min.js",
+              "node_modules/katex/dist/contrib/auto-render.min.js"
+            ]
           }
         },
         "deploy": {

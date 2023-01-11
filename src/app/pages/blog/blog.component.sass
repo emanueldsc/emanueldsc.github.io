@@ -1,0 +1,21 @@
+
+section
+    max-width: 100%
+    padding: 16px
+    margin: 0 auto
+    columns: 4
+    column-gap: 16px
+
+    @media (max-width: 400px)
+        columns: 3
+
+    .box
+        box-shadow: 1px 1px 4px black
+        margin-bottom: 10px
+        border-radius: 4px
+        break-inside: avoid-column
+
+        img
+            border-radius: 4px 4px 0 0
+            max-width: 100%
+            display: block

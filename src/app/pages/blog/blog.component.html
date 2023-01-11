@@ -1,1 +1,15 @@
-<p>blog works!</p>
+<div class="masonry-with-columns">
+
+    <section>
+        <ng-container *ngFor="let post of posts">
+
+            <div class="box">
+                <img [src]="normalizeImage(post.featureImage)" alt="">
+                <h2>{{post.title}}</h2>
+                <p> {{post.content}} </p>
+            </div>
+
+        </ng-container>
+    </section>
+
+</div>
