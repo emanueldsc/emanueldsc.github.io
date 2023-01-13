@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@use './styles/_colors' as c
 :root, html, body
     height: 100%
     width: 100%
@@ -10,3 +10,33 @@
 
 lt-mirror
     display: none
+
+div[markdown]
+    >:nth-child(1),
+    >:nth-child(2)
+        display: none
+
+    blockquote
+        border-left: .5rem solid c.$iconGray
+        margin: 1rem 0
+        padding-left: 3rem
+        font-style: italic
+        color: c.$pGray
+
+    >img
+        width: 100%
+
+    .markdown-clipboard-button
+        background: transparent
+        border: 1px solid white
+        color: white 
+        border-radius: 4px
+
+        &:hover
+            background-color: rgba(255, 255, 255, .5)
+        
+        &:active
+            background-color: rgba(255, 255, 255, .3)
+
+        &::before
+          content: "copy"

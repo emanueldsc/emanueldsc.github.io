@@ -18,8 +18,6 @@ export class BlogComponent implements OnInit {
     private helpService: HelpService
   ) { }
 
-  normalizeImage = (path: string): string => `assets/${path}`
-
 }
 
 

@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 import { ComponentsModule } from '../components/components.module';
 
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './profile/profile.component';
+import { PostComponent } from './post/post.component';
+
+import { ClipboardButtonComponent, ClipboardOptions, MarkdownModule } from "ngx-markdown"
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,11 +18,24 @@ import { PortfolioComponent } from './profile/profile.component';
     HomeComponent,
     BlogComponent,
     ContactComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    PostComponent
   ],
   imports: [
+    RouterModule,
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    MarkdownModule.forRoot({
+      sanitize: SecurityContext.NONE,
+      clipboardOptions: {
+        provide: ClipboardOptions,
+        useValue: {
+          buttonComponent: ClipboardButtonComponent,
+        },
+      },
+    }),
+    MarkdownModule.forChild(),
+    HttpClientModule
   ],
   exports: [
     HomeComponent,

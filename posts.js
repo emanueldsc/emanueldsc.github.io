@@ -10,8 +10,8 @@ const files = fs.readdirSync(pathFiles, 'utf8')
 const data = files.map(fileName => {
     const file = fs.readFileSync(`${pathFiles}/${fileName}`, 'utf-8')
     const { data, content } = matter(file)
-    const jsonData = { content, ...data }
-    console.log(jsonData)
+    const summary = `${content.substring()}...`
+    const jsonData = { summary, ...data, fileName }
     return jsonData
 })
 
