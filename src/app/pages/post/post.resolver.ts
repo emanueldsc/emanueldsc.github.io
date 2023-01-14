@@ -5,15 +5,16 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { Md } from 'src/app/models/Md';
 import { MetaDataPost } from 'src/app/models/MetaDataPost';
 import { HelpService } from 'src/app/services/help.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostResolver implements Resolve<MetaDataPost> {
+export class PostResolver implements Resolve<Md> {
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<MetaDataPost> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Md> {
     const { slug } = route.params
     const post =  this.helpService.getPostBySlug(slug)
     return post;
