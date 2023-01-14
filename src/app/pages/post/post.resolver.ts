@@ -16,7 +16,7 @@ export class PostResolver implements Resolve<MetaDataPost> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<MetaDataPost> {
     const { slug } = route.params
     const post =  this.helpService.getPostBySlug(slug)
-    return of(post);
+    return post;
   }
 
   constructor(

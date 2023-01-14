@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import MdFiles from 'src/assets/mdfiles/mdfiles.json'
+import { Observable, of } from 'rxjs';
+import { ALL_POSTS, POSTS_PATH } from 'src/environments';
 import { MetaDataPost } from '../models/MetaDataPost';
 
 @Injectable({
@@ -7,8 +9,12 @@ import { MetaDataPost } from '../models/MetaDataPost';
 })
 export class HelpService {
 
-  listPostData = (): MetaDataPost[] => MdFiles
+  listAllPosts = (): Observable<MetaDataPost[]> => this.httpClient.get<MetaDataPost[]>(ALL_POSTS)
 
-  getPostBySlug = (slug: string): MetaDataPost => MdFiles.find(mdfile => mdfile.slug === slug) as MetaDataPost
+  getPostBySlug = (slug: string): Observable<MetaDataPost> => this.httpClient.get<MetaDataPost>(`${POSTS_PATH}/${slug}.json`)
+
+  constructor(
+    private httpClient: HttpClient
+  ){ }
   
 }
