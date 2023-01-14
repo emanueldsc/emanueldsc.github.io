@@ -6,7 +6,7 @@
 </div>
 
 <div class="md-container">
-    <div class="image-container" [ngStyle]="{'background-image': 'url('+featureImage+')'}">
+    <div class="image-container" [ngStyle]="{'background-image': 'url('+post.data.featureImage+')'}">
         <img [src]="post.data.featureImage">
     </div>
     <div markdown mermaid katex clipboard [data]="post.content"></div>
