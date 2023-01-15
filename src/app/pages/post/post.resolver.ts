@@ -7,7 +7,7 @@ import {
 import { Observable, of } from 'rxjs';
 import { Md } from 'src/app/models/Md';
 import { MetaDataPost } from 'src/app/models/MetaDataPost';
-import { HelpService } from 'src/app/services/help.service';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,6 @@ export class PostResolver implements Resolve<Md> {
   }
 
   constructor(
-    private helpService: HelpService
+    private helpService: BlogService
   ) {}
 }

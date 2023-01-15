@@ -1,13 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-import 'prismjs';
-import 'prismjs/components/prism-typescript.min.js';
-import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 import { Md } from 'src/app/models/Md';
-import { MetaDataPost } from 'src/app/models/MetaDataPost';
-import { HelpService } from 'src/app/services/help.service';
 
 @Component({
   selector: 'edsc-post',
@@ -18,11 +11,6 @@ export class PostComponent implements OnInit {
 
   post!: Md
 
-  mdFile!: string
-  featureImage!: string
-
-  normalize = (path: string): string => `../../../assets/${path}`
-
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(data => {
       this.post = data['PostResolver']
@@ -31,16 +19,6 @@ export class PostComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private helpService: HelpService
   ) { }
-
-  onLoad(event: any) {
-    console.log(event)
-  }
-
-  onError(event: any) {
-    console.log(event)
-  }
-
-
+  
 }

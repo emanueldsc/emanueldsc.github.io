@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaDataPost } from 'src/app/models/MetaDataPost';
-import { HelpService } from 'src/app/services/help.service';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'blog',
@@ -12,13 +12,13 @@ export class BlogComponent implements OnInit {
   posts: MetaDataPost[] = []
 
   ngOnInit(): void {
-    this.helpService.listAllPosts().subscribe(posts => {
+    this.blogService.listAllPosts().subscribe(posts => {
       this.posts = posts
     })
   }
 
   constructor(
-    private helpService: HelpService
+    private blogService: BlogService
   ) { }
 
 }
