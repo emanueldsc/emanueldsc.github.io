@@ -482,7 +482,15 @@ ng deploy
 
 Voltando ao Projeto clique na aba actions
 
-<img src="assets/images/blog_angular/img4.png">
+<img src="assets/images/blog_angular/img5.png">
+
+Seu projeto deve esta fazendo deploy 
+
+
+Ao final do processo, será disponibilizada uma página com o link correspondente ao nome do seu repositorio
+
+<p style="color: blue; text-decoration: underline"> seurepositorio.github.io </p>
+
 
 
 
