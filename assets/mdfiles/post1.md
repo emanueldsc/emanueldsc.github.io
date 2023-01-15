@@ -484,7 +484,7 @@ Voltando ao Projeto clique na aba actions
 
 <img src="assets/images/blog_angular/img5.png">
 
-Seu projeto deve esta fazendo deploy 
+Seu projeto deve está fazendo deploy 
 
 
 Ao final do processo, será disponibilizada uma página com o link correspondente ao nome do seu repositorio
