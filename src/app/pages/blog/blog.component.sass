@@ -1,13 +1,13 @@
-
+@use 'src/styles/_breaks.sass' as b
 section
     max-width: 100%
     padding: 16px
     margin: 0 auto
-    columns: 4
+    columns: 2
     column-gap: 16px
 
-    @media (max-width: 400px)
-        columns: 3
+    @media screen and (min-width: b.$mobile)
+        columns: 4
 
     .box
         margin-bottom: 10px
@@ -22,5 +22,12 @@ section
             display: block
 
         .content
+            h2
+                font-size: 16px
+                font-weight: 500
+                @media screen and (min-width: b.$mobile)
+                    font-size: 18px
+                    font-weight: 700
+
             *
                 margin: 8px 4px
