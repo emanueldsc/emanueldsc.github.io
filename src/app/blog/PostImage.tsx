@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 
-export default function PostImage({ src, alt }: any) {
+export default function PostImage({ src, alt }: { [key: string]: string }) {
     return (
         <Image
             width={100}

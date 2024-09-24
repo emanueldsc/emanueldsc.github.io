@@ -9,7 +9,7 @@ export default function Home() {
   const articleDirectory = path.join(process.cwd(), 'src/app/editorials/articles')
   const articleFiles = fs.readdirSync(articleDirectory)
 
-  const articles = articleFiles.map((filename) => {
+  const articles = articleFiles.map<{ [key: string]: string }>((filename) => {
     const slug = filename.replace('.md', '')
 
     // Read markdown article content
@@ -25,10 +25,7 @@ export default function Home() {
     }
   })
 
-  const cover: any = articles.find((a: any) => a.cover)
-
-  console.log('cover', cover)
-  console.log('articles', articles)
+  const cover: { [key: string]: string; } | undefined = articles.find((a: { [key: string]: string }) => a.cover)
 
   return (
     <div className="container mt-4 mx-auto px-4">
@@ -40,7 +37,7 @@ export default function Home() {
             <Image
               width={100}
               height={100}
-              src={cover.thumb}
+              src={cover?.thumb ?? ''}
               alt="Artigo em Destaque"
               className="w-full h-64 object-cover rounded-lg"
             />
@@ -60,7 +57,7 @@ export default function Home() {
           {/* Lista de Artigos */}
           <div className="space-y-6">
             {
-              articles.map((article: any, index: number) => (
+              articles.map((article: { [key: string]: string }, index: number) => (
                 <div key={index} className="flex items-center bg-white p-4 shadow-md rounded-lg">
                   <Image
                     width={100}
@@ -79,7 +76,7 @@ export default function Home() {
                   </div>
                 </div>
               ))
-            } 
+            }
           </div>
         </div>
 

@@ -29,7 +29,7 @@ export default function BlogIndexPage() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-primary">Últimos Posts</h1>
       <div className="masonry-grid">
-        {posts.map((post: any) => (
+        {posts.map((post: { [key: string]: string }) => (
           <div key={post.slug} className="masonry-item">
             {/* Uso do Client Component para a imagem */}
             <PostImage src={post.thumb} alt={post.title} />
