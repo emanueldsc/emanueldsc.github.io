@@ -16,45 +16,44 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
                 href="/"
-                className={`${
-                  isActive('/') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
-                } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                className={`${isActive('/') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
+                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
                 Home
               </Link>
               <Link
-                href="/about"
-                className={`${
-                  isActive('/about') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
-                } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
-              >
-                Sobre
-              </Link>
-              <Link
                 href="/blog"
-                className={`${
-                  isActive('/blog') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
-                } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                className={`${isActive('/blog') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
+                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
                 Blog
               </Link>
               <Link
+                href="/about"
+                className={`${isActive('/about') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
+                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+              >
+                Sobre
+              </Link>
+
+              {/* <Link
                 href="/pages/angular"
                 className={`${
                   isActive('/pages/angular') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                 } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
                 Angular
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button
-              type="button"
-              className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-dark"
-            >
-              Contato
-            </button>
+            <Link href="/pages/contato">
+              <button
+                type="button"
+                className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-dark"
+              > Contato
+              </button>
+            </Link>
           </div>
         </div>
       </div>

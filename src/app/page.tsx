@@ -42,8 +42,8 @@ export default function Home() {
               className="w-full h-64 object-cover rounded-lg"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-6">
-              <div className="text-white">
-                <h1 className="text-4xl font-bold mb-4">Destaque {cover?.title}</h1>
+              <div className="text-white flex flex-col justify-center items-center">
+                <h1 className="text-4xl font-bold mb-4 text-center">{cover?.title}</h1>
                 <p className="mb-6">{cover?.summary}</p>
                 <a
                   href="#"
