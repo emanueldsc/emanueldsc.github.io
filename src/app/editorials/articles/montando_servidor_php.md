@@ -4,7 +4,7 @@ date: "2024-09-15"
 summary: "Um guia rápido, e talvez o motivo da sua paixão, por PHP"
 thumb: "/images/featured-article.jpg"
 author: Emanuel Douglas Sousa Costa
-cover: true
+
 ---
 
 # PHP 8.3 no Windows: Instalando, Configurando e Fazendo Seu 'Hello World' Brilhar Sem Drama!

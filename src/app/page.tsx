@@ -96,19 +96,30 @@ export default function Home() {
               </li>
             </ul>
           </div>
-
-          {/* Widget de Assinatura ou Promoção */}
           <div className="bg-gray-100 p-6 shadow-md rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Assine Nossa Newsletter</h2>
-            <p className="text-gray-700 mb-4">Receba as últimas notícias diretamente no seu e-mail.</p>
-            <input
-              type="email"
-              placeholder="Seu e-mail"
-              className="w-full p-2 mb-4 border border-gray-300 rounded"
-            />
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Inscrever-se
-            </button>
+            <h2 className="text-2xl font-bold mb-4">Minhas Redes Sociais</h2>
+            <ul className="space-y-2">
+              <li>
+                <a href="https://github.com/emanueldsc" target="_blank" className="text-gray-600 hover:underline">
+                  Github
+                </a>
+              </li>
+              {/* <li>
+                <a href="https://instagram.com/seu-perfil" target="_blank" className="text-pink-600 hover:underline">
+                  Instagram
+                </a>
+              </li> */}
+              {/* <li>
+                <a href="https://twitter.com/seu-perfil" target="_blank" className="text-blue-400 hover:underline">
+                  Twitter
+                </a>
+              </li> */}
+              <li>
+                <a href="https://www.linkedin.com/in/emanueldouglas/" target="_blank" className="text-blue-700 hover:underline">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
