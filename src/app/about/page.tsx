@@ -12,8 +12,8 @@ export default function About() {
         </p>
         <ul className="list-disc list-inside text-gray-700 mt-4">
           <li>Email: <a href="mailto:emanuel.douglas.sc@gmail.com" className="text-blue-600 hover:underline">emanuel.douglas.sc@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/emanueldouglas" className="text-blue-600 hover:underline">LinkedIn</a></li>
-          <li>LinkedIn: <a href="https://github.com/emanueldsc" className="text-gray-600 hover:underline">GitHub</a></li>
+          <li>LinkedIn: <a target='_blank' href="https://linkedin.com/in/emanueldouglas" className="text-blue-600 hover:underline">LinkedIn</a></li>
+          <li>Github: <a target='_blank' href="https://github.com/emanueldsc" className="text-blue-600 hover:underline">GitHub</a></li>
         </ul>
       </div>
     </div>
