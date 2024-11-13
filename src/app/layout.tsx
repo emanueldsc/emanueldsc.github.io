@@ -6,13 +6,12 @@ export const metadata = {
   description: 'Um blog sobre Angular e desenvolvimento web',
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode, params: { [key: string]: string } }) {
-  const currentPath = `/${params.slug ? `blog/${params.slug}` : ''}`.replace(/\/$/, '');
+export default function RootLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <html lang="pt-BR">
       <body>
-        <Topbar currentPath={currentPath} />
+        <Topbar />
         <main>{children}</main>
       </body>
     </html>

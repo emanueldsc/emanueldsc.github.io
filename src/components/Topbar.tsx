@@ -1,9 +1,11 @@
-import Link from 'next/link';
-import { useState } from 'react';
+"use client"
 
-export default function Topbar({ currentPath }: { currentPath: string }) {
+import Link from 'next/link'
+import { useState } from 'react'
 
-  const [active, useActive] = useState('/')
+export default function Topbar() {
+
+  const [active, setActive] = useState('/')
 
   return (
     <header className="bg-neutral-light shadow">
@@ -11,14 +13,14 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" onClick={() => useState('/')}>
+              <Link href="/" onClick={() => setActive('/')}>
                 <span className="text-xl font-semibold text-primary">EDSC.GitHub</span>
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
                 href="/"
-                onClick={() => useState('/')}
+                onClick={() => setActive('/')}
                 className={`${active === '/' ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                   } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
@@ -26,7 +28,7 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
               </Link>
               <Link
                 href="/blog"
-                onClick={() => useState('/blog')}
+                onClick={() => setActive('/blog')}
                 className={`${active === '/blog' ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                   } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
@@ -34,7 +36,7 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
               </Link>
               <Link
                 href="/about"
-                onClick={() => useState('/about')}
+                onClick={() => setActive('/about')}
                 className={`${active === '/about' ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                   } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
