@@ -1,6 +1,39 @@
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 import Link from 'next/link';
 
+interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+
+interface PageProps {
+  currentPath: string;
+}
+
+interface Params {
+  slug: string;
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = [
+    { params: { slug: '' } },
+    { params: { slug: 'blog' } },
+    { params: { slug: 'about' } }
+  ];
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps<PageProps, Params> = async ({ params }) => {
+  return {
+    props: {
+      currentPath: params?.slug || ''
+    }
+  };
+};
+
 export default function Topbar({ currentPath }: { currentPath: string }) {
+
   const isActive = (path: string) => currentPath === path;
 
   return (
