@@ -1,40 +1,11 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { ParsedUrlQuery } from 'querystring';
-import Link from 'next/link';
+"use client"
 
-interface Params extends ParsedUrlQuery {
-  slug: string;
-}
+import Link from 'next/link'
+import { useState } from 'react'
 
-interface PageProps {
-  currentPath: string;
-}
+export default function Topbar() {
 
-interface Params {
-  slug: string;
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = [
-    { params: { slug: '' } },
-    { params: { slug: 'blog' } },
-    { params: { slug: 'about' } }
-  ];
-
-  return { paths, fallback: false };
-};
-
-export const getStaticProps: GetStaticProps<PageProps, Params> = async ({ params }) => {
-  return {
-    props: {
-      currentPath: params?.slug || ''
-    }
-  };
-};
-
-export default function Topbar({ currentPath }: { currentPath: string }) {
-
-  const isActive = (path: string) => currentPath === path;
+  const [active, setActive] = useState('/')
 
   return (
     <header className="bg-neutral-light shadow">
@@ -42,28 +13,31 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/">
-                <span className="text-xl font-semibold text-primary">Types EDSC</span>
+              <Link href="/" onClick={() => setActive('/')}>
+                <span className="text-xl font-semibold text-primary">EDSC.GitHub</span>
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
                 href="/"
-                className={`${isActive('/') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
+                onClick={() => setActive('/')}
+                className={`${active === '/' ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                   } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
                 Home
               </Link>
               <Link
                 href="/blog"
-                className={`${isActive('/blog') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
+                onClick={() => setActive('/blog')}
+                className={`${active === '/blog' ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                   } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
                 Blog
               </Link>
               <Link
                 href="/about"
-                className={`${isActive('/about') ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
+                onClick={() => setActive('/about')}
+                className={`${active === '/about' ? 'border-primary text-primary' : 'border-transparent text-neutral-dark hover:text-primary'
                   } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
                 Sobre
