@@ -10,7 +10,18 @@
     /* Cor de texto padrão */
 }
 
+body::before {
+    background-image: url(/images/background.png);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: repeat;
+    background-size: 500px;
+    filter: saturate(0.3);
+    z-index: -1;
+}
+
 body {
-    background-color: var(--background);
+    height: 100vh;
     color: var(--foreground);
 }

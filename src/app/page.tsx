@@ -1,3 +1,5 @@
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import fs from 'fs';
 import matter from "gray-matter";
 import Image from 'next/image';
@@ -82,7 +84,7 @@ export default function Home() {
 
         {/* Coluna Secundária */}
         <div className="w-full lg:w-1/3 px-4">
-          <div className="bg-white p-6 shadow-md rounded-lg mb-6">
+          {/* <div className="bg-white p-6 shadow-md rounded-lg mb-6">
             <h2 className="text-2xl font-bold mb-4">Posts Recentes</h2>
             <ul className="space-y-2">
               <li>
@@ -95,28 +97,18 @@ export default function Home() {
                 <a href="#" className="text-blue-600 hover:underline">Post 3</a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="bg-gray-100 p-6 shadow-md rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Minhas Redes Sociais</h2>
             <ul className="space-y-2">
               <li>
                 <a href="https://github.com/emanueldsc" target="_blank" className="text-gray-600 hover:underline">
-                  Github
+                  Github <FontAwesomeIcon icon={faGithub} className="inline align-top mr-2 w-5" />
                 </a>
               </li>
-              {/* <li>
-                <a href="https://instagram.com/seu-perfil" target="_blank" className="text-pink-600 hover:underline">
-                  Instagram
-                </a>
-              </li> */}
-              {/* <li>
-                <a href="https://twitter.com/seu-perfil" target="_blank" className="text-blue-400 hover:underline">
-                  Twitter
-                </a>
-              </li> */}
               <li>
                 <a href="https://www.linkedin.com/in/emanueldouglas/" target="_blank" className="text-blue-700 hover:underline">
-                  LinkedIn
+                  LinkedIn <FontAwesomeIcon icon={faLinkedin} className="inline align-top mr-2 w-5" />
                 </a>
               </li>
             </ul>
