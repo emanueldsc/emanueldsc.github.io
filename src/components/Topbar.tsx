@@ -45,7 +45,7 @@ export default function Topbar() {
               </Link>
           
               <Link
-                href="/about"
+                href="/portfolio"
                 onClick={() => setActive('/portfolio')}
                 className={`${active === '/portfolio' ? linkActivate : linkNotActivate } ${defaultLinkMenu}`}
               >
