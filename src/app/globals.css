@@ -8,20 +8,39 @@
     /* Cor de fundo padrão */
     --foreground: #000000;
     /* Cor de texto padrão */
+    --white-trasparent: rgba(255, 255, 255, 0.5);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    position: relative;
 }
 
 body::before {
-    background-image: url(/images/background.png);
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/background.png);
     background-repeat: repeat;
-    background-size: 500px;
+    background-size: 550px;
     filter: saturate(0.3);
     z-index: -1;
 }
 
+main > div {
+    margin-top: 1rem;
+    padding: 1rem !important;
+    border-radius: 8xp;
+    background-color: var(--white-trasparent);
+}
+
 body {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     color: var(--foreground);
 }

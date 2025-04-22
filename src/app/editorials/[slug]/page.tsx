@@ -19,7 +19,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4">
-      <p className="text-sm text-gray-500 mt-8 mb-1">{metadata.date}</p>
+      <p className="text-sm text-gray-500 mb-1">{metadata.date}</p>
       <ReactMarkdown className="prose prose-lg" remarkPlugins={[remarkGfm]}>
         {content}
       </ReactMarkdown>
