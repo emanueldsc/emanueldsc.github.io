@@ -44,3 +44,8 @@ body {
     height: 100%;
     color: var(--foreground);
 }
+
+a {
+    text-decoration: underline !important;
+    color: darkcyan !important; 
+}
