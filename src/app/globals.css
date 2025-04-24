@@ -45,7 +45,7 @@ body {
     color: var(--foreground);
 }
 
-a {
+a.darkcyan {
     text-decoration: underline !important;
     color: darkcyan !important; 
 }
