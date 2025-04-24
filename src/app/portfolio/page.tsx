@@ -6,7 +6,7 @@ export default function Portifolio() {
             <h1 className="text-3xl font-bold mb-4">Portfólio</h1>
             <p className="text-lg mb-8">
                 Aqui estão alguns dos meus projetos pessoais <br />
-                Para mais acesse <a href="https://github.com/emanueldsc">Github.com/emanueldsc</a>
+                Para mais acesse <a className="darkcyan" href="https://github.com/emanueldsc">Github.com/emanueldsc</a>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {projects.map((projeto, index) => (
