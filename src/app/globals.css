@@ -35,7 +35,7 @@ body::before {
 main > div {
     margin-top: 1rem;
     padding: 1rem !important;
-    border-radius: 8xp;
+    border-radius: 8px !important;
     background-color: var(--white-trasparent);
 }
 
