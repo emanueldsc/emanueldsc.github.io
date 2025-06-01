@@ -6,6 +6,8 @@ author: "Emanuel Douglas Sousa Costa"
 thumb: "/images/components.jpg"
 ---
 
+![Criando Componentes Standalone em Angular](/images/components.jpg "Criando Componentes Standalone em Angular")
+
 # Criando Componentes Standalone em Angular
 
 ## Objetivo da post

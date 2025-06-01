@@ -5,6 +5,8 @@ date: "24/08/2024"
 thumb: "/images/angular.jpg"
 ---
 
+![Preparando o Ambiente](/images/angular.jpg "Preparando o Ambiente")
+
 # Preparando o Ambiente
 
 Bem-vindo(a) à primeira aula do nosso curso completo de Angular! Nesta série de posts, vamos explorar o universo do desenvolvimento web com Angular, desde os conceitos mais básicos até os tópicos avançados. O objetivo deste curso é capacitar você a criar aplicações web robustas, eficientes e escaláveis utilizando Angular, uma das principais ferramentas do mercado.

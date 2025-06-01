@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import './blog.sass';
 
 type BlogPostPageProps = {
   params: {
@@ -20,7 +21,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="max-w-4xl mx-auto px-4">
       <p className="text-sm text-gray-500 mb-1">{metadata.date} {metadata.author ? ' - ' +  metadata.author : ''}</p>
-      <ReactMarkdown className="prose prose-lg" remarkPlugins={[remarkGfm]}>
+      <ReactMarkdown className="prose max-w-none post" remarkPlugins={[remarkGfm]}>
         {content}
       </ReactMarkdown>
     </div>

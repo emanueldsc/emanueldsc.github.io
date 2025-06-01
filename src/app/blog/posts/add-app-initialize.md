@@ -1,9 +1,13 @@
 ---
 title: "Angular - Não Comece a Festa Sem a Configuração!"
 summary: "Método simples de implementar navegação com Jetpack Compose"
-date: "28/04/2025"
-thumb: "/images/navigation_jetpack_compose.png"
+date: "25/05/2025"
+thumb: "/images/angularinitialize.png"
 ---
+
+![Angular - Não Comece a Festa Sem a Configuração](/images/angularinitialize.png "Angular - Não Comece a Festa Sem a Configuração")
+
+# Não Comece a Festa Sem a Configuração!
 
 Já se pegaram na situação de precisar de uma informação crucial antes que a sua aplicação Angular sequer pensasse em dar o ar da graça? Tipo, você precisa saber o endereço da festa (a BASE_URL da sua API) antes de convidar todo mundo pra dançar? Se sim, prepare-se, porque hoje vamos desvendar um segredo poderoso do Angular: o APP_INITIALIZER e como ele, junto com o appConfig e uns Providers espertos, garante que sua festa só comece quando tudo estiver no lugar!
 

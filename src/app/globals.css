@@ -8,7 +8,7 @@
     /* Cor de fundo padrão */
     --foreground: #000000;
     /* Cor de texto padrão */
-    --white-trasparent: rgba(255, 255, 255, 0.5);
+    --white-trasparent: rgba(255, 255, 255, 1);
 }
 
 html, body {
@@ -48,4 +48,10 @@ body {
 a.darkcyan {
     text-decoration: underline !important;
     color: darkcyan !important; 
+}
+
+tbody {
+    td {
+        text-align: center !important;
+    }
 }
