@@ -1,12 +1,27 @@
 .masonry-grid
   display: grid
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+  grid-template-columns: repeat(4, 1fr)
   gap: 16px
+  
+  // responsividade
+  @media (max-width: 900px)
+    grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 600px)
+    grid-template-columns: 1fr
 
 .masonry-item
-  break-inside: avoid
-  margin-bottom: 16px // Adiciona margem entre os itens verticalmente
+  display: flex
+  flex-direction: column
+  height: 100%
   background-color: #ffffff // Cor de fundo dos itens
   border-radius: 8px // Cantos arredondados
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) // Sombra para os itens
   overflow: hidden // Garante que o conteúdo não vaze para fora dos limites
+
+.p-6
+  display: flex
+  flex-direction: column
+  flex: 1
+
+  .veja-mais
+    margin-top: auto

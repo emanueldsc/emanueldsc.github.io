@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "./projects";
 
 export default function Portifolio() {
@@ -11,7 +12,7 @@ export default function Portifolio() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {projects.map((projeto, index) => (
                     <div key={index} className="bg-white shadow-md rounded-lg p-6">
-                        <img src={projeto.image} alt={projeto.title} className="w-full h-48 object-cover rounded-t-lg mb-4" />
+                        <Image src={projeto.image} width={100} height={100} alt={projeto.title} className="w-full h-48 object-cover rounded-t-lg mb-4" />
                         <h2 className="text-xl font-semibold mb-2">{projeto.title}</h2>
                         <p className="text-gray-700 mb-4">{projeto.description}</p>
                         <a href={projeto.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mr-4">Ver Projeto</a>

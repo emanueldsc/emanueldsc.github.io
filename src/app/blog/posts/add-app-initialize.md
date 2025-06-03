@@ -1,6 +1,6 @@
 ---
 title: "Angular - Não Comece a Festa Sem a Configuração!"
-summary: "Método simples de implementar navegação com Jetpack Compose"
+summary: "Bootstrap correto em aplicações Angular."
 date: "25/05/2025"
 thumb: "/images/angularinitialize.png"
 ---

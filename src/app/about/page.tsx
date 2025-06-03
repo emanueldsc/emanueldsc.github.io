@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import style from './page.module.sass';
 
 export default function About() {
@@ -6,7 +7,7 @@ export default function About() {
       <div className="bg-white p-6 shadow-md rounded-lg">
         <h1 className="text-4xl font-bold mb-6 text-primary">Sobre mim</h1>
         <div>
-          <img src="/images/avatar2.jpg" alt="avatar" className={style.avatar} />
+          <Image height={100} width={100} src="/images/avatar2.jpg" alt="avatar" className={style.avatar} />
           <p className={`text-gray-700 mb-4 ${style.text}`}>
             👋 Olá!
             Sou um Desenvolvedor Fullstack especializado em desenvolvimento frontend, com forte ênfase em Angular e Vue. Tenho experiência na criação de interfaces dinâmicas utilizando as três principais ferramentas do mercado: Angular, Vue e React.

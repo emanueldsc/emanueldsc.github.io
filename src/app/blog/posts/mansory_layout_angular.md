@@ -1,7 +1,7 @@
 ---
 title: "Criando um Layout Masonry com Angular"
 date: "11/11/2024"
-summary: "Imagine-se folheando uma revista, repleta de imagens que parecem se organizar magicamente, criando um mosaico perfeito aos seus olhos..."
+summary: "Mosaico perfeito aos seus olhos com mansory layout."
 thumb: "/images/mansory.jpg"
 cover: true
 ---
